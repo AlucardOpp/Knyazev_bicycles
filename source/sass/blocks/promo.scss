@@ -1,0 +1,134 @@
+.promo {
+  background-image: url("../img/bike-background.png");
+  background-repeat: no-repeat;
+  background-color: $background-black;
+  background-size: 100% 100%;
+  background-position: center;
+  padding: 319px 0 240px 0;
+  margin-top: -63px;
+  position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bike-background@2x.png");
+  }
+
+  @media (max-width: 1443px) {
+    background-size: 1440px 100%;
+  }
+}
+
+.promo__wrapper {
+  width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.promo__container {
+  width: 393px;
+
+  & h1 {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 64px;
+    letter-spacing: -0.005em;
+    color: $white;
+    margin: 31px 0 24px 0;
+  }
+
+  & p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.005em;
+    color: $white;
+    opacity: 0.8;
+    margin: 0;
+  }
+}
+
+.promo__form {
+  width: 327px;
+}
+
+@media (max-width: $tablet-width) {
+  .promo {
+    background-image: none;
+    background-color: transparent;
+    margin-top: 0;
+    padding: 0 0 70px 0;
+  }
+
+  .promo__wrapper {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo__link {
+    display: none;
+  }
+
+  .promo__container {
+    width: 100%;
+    min-height: 340px;
+    margin: -51px 0 70px 0;
+    background-image: url("../img/bike-background-tablet.png");
+    background-repeat: no-repeat;
+    background-color: $background-black;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bike-background-tablet@2x.png");
+    }
+
+    & h1 {
+      margin: 135px auto 20px auto;
+      font-size: 30px;
+      line-height: 42px;
+      text-align: center;
+      max-width: 525px;
+    }
+
+    & p {
+      text-align: center;
+      font-size: 18px;
+      max-width: 435px;
+      margin: 0 auto;
+    }
+  }
+
+  .promo__form {
+    width: 321px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promo {
+    padding-bottom: 71px;
+  }
+
+  .promo__container {
+    min-height: 390px;
+    background-image: url("../img/bike-background-mobile.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bike-background-mobile@2x.png");
+    }
+
+    & h1,
+    & p {
+      max-width: 288px;
+    }
+
+    & h1 {
+      margin-top: 120px;
+    }
+  }
+
+  .promo__form {
+    width: 288px;
+  }
+}

@@ -1,0 +1,39 @@
+.page-header {
+  background-color: #0e0e0e;
+}
+
+.page-header__wrapper {
+  width: 873.5px;
+  margin: 0 auto;
+  padding-top: 21px;
+}
+
+.page-header__link {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .page-header__wrapper {
+    width: auto;
+    margin: 0;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+
+    &--nojs {
+      flex-direction: column;
+    }
+  }
+
+  .page-header__link {
+    display: block;
+    padding: 24px 0 3px 21px;
+    z-index: 1;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-header__link {
+    padding-left: 16px;
+  }
+}
