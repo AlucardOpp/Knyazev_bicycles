@@ -1,0 +1,47 @@
+.our-location {
+  margin-bottom: 42px;
+
+  & h2 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.005em;
+    color: $our-location-black;
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+
+  & p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+    text-align: center;
+    color: $black-70;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .our-location {
+    margin-bottom: 20px;
+
+    & h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .our-location {
+    margin-bottom: 25px;
+
+    & h2 {
+      font-size: 18px;
+    }
+
+    & p {
+      margin: 0 25px;
+      text-align: center;
+    }
+  }
+}
