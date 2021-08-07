@@ -25,21 +25,19 @@
         </svg>
       </a>
       <nav class="main-nav main-nav--nojs">
-        <button aria-label="" class="main-nav__toggle main-nav__toggle--nojs" type="button">
-          <span class="visually-hidden">Открыть/закрыть меню навигации</span>
-        </button>
+        <button aria-label="" class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-label="Открыть/закрыть меню навигации"></button>
         <ul>
           <li>
-            <a href="#" aria-label="">О нас</a>
+            <a href="#facts" aria-label="">О нас</a>
           </li>
           <li>
-            <a href="#" aria-label="">Виды велосипедов</a>
+            <a href="#types" aria-label="">Виды велосипедов</a>
           </li>
           <li>
-            <a href="#" aria-label="">Видео про велосипеды</a>
+            <a href="#video" aria-label="">Видео про велосипеды</a>
           </li>
           <li>
-            <a href="#" aria-label="">Контакты</a>
+            <a href="#contacts" aria-label="">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -72,7 +70,7 @@
         </form>
       </div>
     </section>
-    <section class="facts">
+    <section id="facts" class="facts">
       <div class="facts__wrapper">
         <h2>Несколько фактов о нас</h2>
         <ol>
@@ -91,7 +89,7 @@
         </ol>
       </div>
     </section>
-    <section class="bicycles-types">
+    <section id="types" class="bicycles-types">
       <div class="bicycles-types__wrapper">
         <h2>Виды велосипедов</h2>
         <ul>
@@ -122,6 +120,21 @@
         </ul>
       </div>
     </section>
+    <section id="video" class="video">
+      <div class="video__wrapper">
+        <h2>Видео про велосипеды</h2>
+        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <div class="video__container">
+        <picture>
+          <source type="image/webp" srcset="./img/video-bike.webp 1x, ./img/video-bike@2x.webp 2x">
+          <!-- 1х: 929px; 2x: 1858px -->
+          <img src="./img/video-bike.jpg" srcset="./img/video-bike@2x.jpg 2x" width="929" height="522" alt="Изображение велосипеда">
+        </picture>
+        <button class="video__button" type="button" aria-label="">
+        </button>
+      </div>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">
@@ -131,9 +144,11 @@
         <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
       </section>
       <section class="map">
+        <h2 class="visually-hidden">Карта</h2>
         <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651638!2d30.320894616382784!3d59.93879418187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1628279889245!5m2!1sru!2sru" width="957" height="530" style="border: 0;" allowfullscreen loading="lazy"></iframe>
       </section>
-      <section class="contacts">
+      <section id="contacts" class="contacts">
+        <h2 class="visually-hidden">Контактные данные</h2>
         <ul>
           <li>
             <a class="contacts__link contacts__link--mail" href="mailto:puteshestviemechta@gmail.ru" aria-label="Написать на почту компании">puteshestviemechta@gmail.ru</a>
@@ -146,6 +161,7 @@
     </div>
   </footer>
 
+  <script src="./js/vendor.js"></script>
   <script type="module" src="./js/main.js"></script>
 </body>
 

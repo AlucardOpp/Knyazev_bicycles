@@ -49,3 +49,13 @@ if (inputTel) {
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
 });
+
+// Плавный скролл по клику на якорь
+
+$('a[href*="#"]').on('click', function(evt) {
+  evt.preventDefault();
+  const anchor = $(this).attr('href');
+  $('html, body').stop().animate({
+    scrollTop: $(anchor).offset().top - 60
+  }, 800);
+});
