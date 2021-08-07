@@ -24,6 +24,11 @@
     &:hover {
       color: $black-70;
     }
+
+    &:active {
+      color: $black-70;
+      background-color: $turquoise-70;
+    }
   }
 }
 

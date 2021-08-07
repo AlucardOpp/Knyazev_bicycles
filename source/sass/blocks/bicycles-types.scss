@@ -1,0 +1,218 @@
+.bicycles-types {
+  background-color: $bicycles-types-background-grey;
+  padding: 149px 0 147px 0;
+  overflow: hidden;
+
+  & h2 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.005em;
+    color: $our-location-black;
+    margin: 0 0 51px 0;
+    text-align: center;
+  }
+
+  & h3 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 34px;
+    letter-spacing: -0.5px;
+    color: $black;
+    text-align: center;
+    margin: 18px 0 0 0;
+  }
+
+  & ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  & li {
+    position: relative;
+    z-index: 1;
+  }
+
+  & img,
+  & picture {
+    border-radius: 10px;
+
+    @media (max-width: 1099px) {
+      width: 320px;
+    }
+  }
+}
+
+.bicycles-types__wrapper {
+  max-width: 1126px;
+  margin: 0 auto;
+}
+
+.bicycles-types__bicycle {
+  &--road {
+    margin-top: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background-image: url("../img/road-bike-ellipse.svg");
+      z-index: -1;
+      left: -60px;
+      top: 156px;
+    }
+  }
+
+  &--mountain {
+    margin-top: 39px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 47px;
+      height: 47px;
+      background-image: url("../img/mountain-bike-square.svg");
+      left: -19px;
+      top: -18px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 47px;
+      height: 47px;
+      background-image: url("../img/mountain-bike-square.svg");
+      right: -23px;
+      bottom: 35px;
+    }
+  }
+
+  &--children {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 95px;
+      height: 95px;
+      background-image: url("../img/children-bike-ellipse.svg");
+      top: -32px;
+      right: -36px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .bicycles-types {
+    padding: 50px 0 20px 0;
+
+    & h2 {
+      font-size: 24px;
+      line-height: 41px;
+      margin-bottom: 30px;
+    }
+
+    & ul {
+      margin: 0 -25px;
+      justify-content: space-around;
+
+      @media (min-width: 938px) {
+        margin: 0 18px;
+      }
+    }
+
+    & li {
+      margin-bottom: 50px;
+    }
+
+    & img,
+    & picture {
+      width: 270px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  .bicycles-types__wrapper {
+    width: auto;
+    min-width: 590px;
+    margin: 0 89px;
+  }
+
+  .bicycles-types__bicycle {
+    &--road {
+      &::before {
+        width: 127px;
+        height: 127px;
+        background-size: cover;
+        left: -37px;
+        top: auto;
+        bottom: 28px;
+      }
+    }
+
+    &--mountain {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &--children {
+      &::before {
+        width: 68px;
+        height: 68px;
+        background-size: cover;
+        top: -20px;
+        right: -25px;
+      }
+    }
+
+    &--road,
+    &--mountain {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .bicycles-types {
+    padding-bottom: 12px;
+
+    & ul {
+      margin: 0;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    & li {
+      margin-bottom: 40px;
+    }
+  }
+
+  .bicycles-types__wrapper {
+    min-width: 270px;
+    margin: 0 25px;
+  }
+
+  .bicycles-types__bicycle {
+    &--road {
+      &::before {
+        left: -24px;
+      }
+    }
+
+    &--children {
+      &::before {
+        right: -15px;
+      }
+    }
+  }
+}
