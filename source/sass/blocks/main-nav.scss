@@ -5,7 +5,7 @@
   & ul {
     list-style: none;
     margin: 0;
-    padding: 0 22px 9px 19px;
+    padding: 0 22px 8px 19px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -96,7 +96,7 @@
         height: 7px;
         border-top: 2px solid $arrow-menu-grey;
         border-right: 2px solid $arrow-menu-grey;
-        right: 25px;
+        right: 26px;
         top: 25px;
         transform: rotate(45deg);
       }

@@ -1,5 +1,5 @@
 .facts {
-  margin-bottom: 55px;
+  margin-bottom: 60px;
 
   & h2 {
     font-weight: 600;
@@ -7,7 +7,7 @@
     line-height: 30px;
     letter-spacing: -0.005em;
     color: $our-location-black;
-    margin: 0 0 105px 0;
+    margin: 0 0 101px 0;
     align-self: center;
   }
 
@@ -29,8 +29,8 @@
       position: absolute;
       counter-increment: myCounter;
       content: "0"counter(myCounter);
-      top: -54px;
-      margin: 0 115px;
+      top: -52px;
+      margin: 0 116px;
       color: $turquoise;
       font-weight: 700;
       font-size: 28px;
@@ -73,15 +73,18 @@
 
     & ol {
       justify-content: space-between;
-
-      // @media (min-width: 900px) {
-      //   justify-content: space-around;
-      // }
+      margin: 0 4px;
     }
 
     & li {
       @media (min-width: 980px) {
-        margin-right: 15px;
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+
+      &::after {
+        top: -54px;
+        margin: 0 113px;
       }
     }
   }
@@ -100,14 +103,29 @@
     & ol {
       flex-direction: column;
       justify-content: start;
+      margin: 0;
     }
 
     & li {
-      margin: 0 auto 81px auto;
+      margin: 0 auto 92px auto;
+
+      &::after {
+        top: -46px;
+        margin: 0 116px;
+      }
+
+      &:first-child {
+        margin-bottom: 82px;
+
+        &::after {
+          top: -56px;
+        }
+      }
     }
 
     & p {
       font-size: 18px;
+      max-width: 263px;
     }
   }
 

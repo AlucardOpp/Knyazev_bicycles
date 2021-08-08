@@ -6,11 +6,11 @@
     letter-spacing: -0.005em;
     color: $white;
     text-align: center;
-    margin: 0 0 20px 0;
+    margin: 5px 0 19px 0;
   }
 
   & button {
-    width: 100%;
+    width: 325px;
     height: 51px;
     border: none;
     border-radius: 6px;
@@ -67,6 +67,10 @@
       color: $black;
       margin-bottom: 30px;
     }
+
+    & button {
+      width: 321px;
+    }
   }
 
   .form__field {
@@ -81,6 +85,10 @@
   .form {
     & p {
       margin-bottom: 20px;
+    }
+
+    & button {
+      width: 286px;
     }
   }
 

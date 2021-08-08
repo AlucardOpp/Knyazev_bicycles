@@ -1,6 +1,6 @@
 .bicycles-types {
   background-color: $bicycles-types-background-grey;
-  padding: 149px 0 147px 0;
+  padding: 150px 0 149px 0;
   overflow: hidden;
 
   & h2 {
@@ -9,7 +9,7 @@
     line-height: 30px;
     letter-spacing: -0.005em;
     color: $our-location-black;
-    margin: 0 0 51px 0;
+    margin: 0 0 50px 0;
     text-align: center;
   }
 
@@ -20,16 +20,20 @@
     letter-spacing: -0.5px;
     color: $black;
     text-align: center;
-    margin: 18px 0 0 0;
+    margin: 17px 0 0 0;
   }
 
   & ul {
     list-style: none;
     padding: 0;
-    margin: 0 20px;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (max-width: 1179px) {
+      margin: 0 20px;
+    }
   }
 
   & li {
@@ -88,7 +92,7 @@
       height: 47px;
       background-image: url("../img/mountain-bike-square.svg");
       right: -23px;
-      bottom: 35px;
+      bottom: 31px;
     }
   }
 
@@ -150,7 +154,7 @@
         background-size: cover;
         left: -37px;
         top: auto;
-        bottom: 28px;
+        bottom: 26px;
       }
     }
 
@@ -193,7 +197,7 @@
     }
 
     & li {
-      margin-bottom: 40px;
+      margin-bottom: 42px;
     }
   }
 
@@ -205,13 +209,13 @@
   .bicycles-types__bicycle {
     &--road {
       &::before {
-        left: -24px;
+        left: -25px;
       }
     }
 
     &--children {
       &::before {
-        right: -15px;
+        right: -14px;
       }
     }
   }
