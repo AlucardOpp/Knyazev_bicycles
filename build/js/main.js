@@ -1,14 +1,31 @@
 'use strict';
 
-const NUMBERS = /[0-9]/;
-const ELEVEN_NUMBERS = /[0-9]{11}/;
-const MIN_MAX_TEL_LENGTH = 11;
+const NUMBERS = /^[^a-zA-Zа-яА-Я]+$/;
 
 const pageHeaderWrapper = document.querySelector('.page-header__wrapper');
 const mainNav = document.querySelector('.main-nav');
 const mainNavToggle = document.querySelector('.main-nav__toggle');
+const inputName = document.querySelector("#name");
 const inputTel = document.querySelector('#tel');
 const form = document.querySelector(".form");
+
+const isStorageSupport = true;
+let storageName = '';
+let storageTel = '';
+
+try {
+  storageName = localStorage.getItem('name');
+  storageTel = localStorage.getItem('tel')
+} catch (err) {
+  isStorageSupport = false;
+}
+
+if (storageName) {
+  inputName.value = storageName;
+}
+if (storageTel) {
+  inputTel.value = storageTel;
+}
 
 if (pageHeaderWrapper) {
   pageHeaderWrapper.classList.remove('page-header__wrapper--nojs');
@@ -27,17 +44,10 @@ if (mainNav && mainNavToggle) {
 if (inputTel) {
   inputTel.addEventListener('input', () => {
     const inputValue = inputTel.value;
-    const valueLength = inputTel.value.length;
 
     if (!inputValue) {
       inputTel.setCustomValidity('Обязательное поле');
-    } else if (valueLength > MIN_MAX_TEL_LENGTH) {
-      inputTel.setCustomValidity(`Удалите лишние ${valueLength - MIN_MAX_TEL_LENGTH} символы`);
     } else if (!NUMBERS.test(inputValue)) {
-      inputTel.setCustomValidity('В данном поле требуются только цифры');
-    } else if (valueLength < MIN_MAX_TEL_LENGTH) {
-      inputTel.setCustomValidity(`Ещё ${MIN_MAX_TEL_LENGTH - valueLength} символа(ов)`);
-    } else if (!ELEVEN_NUMBERS.test(inputValue)) {
       inputTel.setCustomValidity('В данном поле требуются только цифры');
     } else {
       inputTel.setCustomValidity('');
@@ -46,11 +56,18 @@ if (inputTel) {
   })
 }
 
-form.addEventListener('submit', (evt) => {
-  evt.preventDefault();
-});
-
-// Плавный скролл по клику на якорь
+if (form) {
+  form.addEventListener('submit', (evt) => {
+    if (isStorageSupport) {
+      if (inputTel.value) {
+        localStorage.setItem('tel', inputTel.value);
+      }
+      if (inputName.value) {
+        localStorage.setItem('name', inputName.value);
+      }
+    }
+  });
+}
 
 $('a[href*="#"]').on('click', function(evt) {
   evt.preventDefault();

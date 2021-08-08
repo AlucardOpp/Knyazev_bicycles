@@ -1,6 +1,14 @@
 .map {
   height: 530px;
   margin-bottom: 40px;
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $map-background-grey;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map@2x.png");
+  }
 }
 
 .map__iframe {

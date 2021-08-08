@@ -15,11 +15,11 @@
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body class="page__body">
+<body class="body">
 
   <header class="page-header">
     <div class="page-header__wrapper page-header__wrapper--nojs">
-      <a aria-label="" class="page-header__link">
+      <a class="page-header__link" aria-label="Переход на главную страницу">
         <svg width="68" height="21">
           <use xlink:href="./img/sprite_auto.svg#icon-logo"></use>
         </svg>
@@ -28,16 +28,16 @@
         <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-label="Открыть/закрыть меню навигации"></button>
         <ul>
           <li>
-            <a href="#facts" aria-label="">О нас</a>
+            <a href="#facts" aria-label="Переход к секции О нас">О нас</a>
           </li>
           <li>
-            <a href="#types" aria-label="">Виды велосипедов</a>
+            <a href="#types" aria-label="Переход к секции Виды велосипедов">Виды велосипедов</a>
           </li>
           <li>
-            <a href="#video" aria-label="">Видео про велосипеды</a>
+            <a href="#video" aria-label="Переход к секции Видео про велосипеды">Видео про велосипеды</a>
           </li>
           <li>
-            <a href="#contacts" aria-label="">Контакты</a>
+            <a href="#contacts" aria-label="Переход к секции Контакты">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -48,7 +48,7 @@
     <section class="promo">
       <div class="promo__wrapper">
         <div class="promo__container">
-          <a class="promo__link">
+          <a class="promo__link" aria-label="Переход на главную страницу">
             <svg width="68" height="21">
               <use xlink:href="./img/sprite_auto.svg#icon-logo"></use>
             </svg>
@@ -60,13 +60,13 @@
           <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <div class="form__field">
             <label class="visually-hidden" for="name">Имя</label>
-            <input aria-label="" type="text" id="name" name="name" placeholder="Введите Ваше Имя" autocomplete="off" required>
+            <input type="text" id="name" name="name" aria-label="Поле заполнения имени" placeholder="Введите Ваше Имя" autocomplete="off" required>
           </div>
           <div class="form__field">
             <label class="visually-hidden" for="tel">Телефон</label>
-            <input aria-label="" type="tel" id="tel" name="tel" placeholder="Введите Ваш номер телефона" maxlength="11" autocomplete="off" required>
+            <input type="tel" id="tel" name="tel" aria-label="Поле заполнения телефона" placeholder="Введите Ваш номер телефона" autocomplete="off" required>
           </div>
-          <button aria-label="" type="submit">Подобрать велосипед мечты</button>
+          <button aria-label="Отправить заполненные данные" type="submit" >Подобрать велосипед мечты</button>
         </form>
       </div>
     </section>
@@ -130,7 +130,7 @@
           <!-- 1х: 929px; 2x: 1858px -->
           <img src="./img/video-bike.jpg" srcset="./img/video-bike@2x.jpg 2x" width="930" height="522" alt="Изображение велосипеда">
         </picture>
-        <button class="video__button" type="button" aria-label="">
+        <button class="video__button" type="button" aria-label="Включить видео">
         </button>
       </div>
       </div>
@@ -145,7 +145,7 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651638!2d30.320894616382784!3d59.93879418187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1628279889245!5m2!1sru!2sru" width="957" height="530" style="border: 0;" allowfullscreen loading="lazy"></iframe>
+        <iframe title="Интерактивная карта" class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651638!2d30.320894616382784!3d59.93879418187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1628279889245!5m2!1sru!2sru" width="957" height="530" style="border: 0;" allowfullscreen loading="lazy"></iframe>
       </section>
       <section id="contacts" class="contacts">
         <h2 class="visually-hidden">Контактные данные</h2>

@@ -18,7 +18,6 @@ var del = require('del');
 
 gulp.task('normalize', function () {
   return gulp.src('source/sass/normalize.min.css')
-      .pipe(rename('normalize.min.css'))
       .pipe(gulp.dest('build/css'));
 });
 

@@ -31,6 +31,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media (min-width: 1180px) {
+      justify-content: start;
+    }
+
     @media (max-width: 1179px) {
       margin: 0 20px;
     }
@@ -39,6 +43,14 @@
   & li {
     position: relative;
     z-index: 1;
+
+    @media (min-width: 1180px) {
+      margin-right: 50px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
   }
 
   & img,
@@ -48,6 +60,10 @@
     @media (max-width: 1099px) {
       width: 320px;
     }
+  }
+
+  & img {
+    background-color: $bicycle-background-grey;
   }
 }
 
