@@ -1,55 +1,55 @@
 .facts {
   margin-bottom: 60px;
+}
 
-  & h2 {
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 30px;
-    letter-spacing: -0.005em;
-    color: $our-location-black;
-    margin: 0 0 101px 0;
-    align-self: center;
+.facts h2 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $our-location-black;
+  margin: 0 0 101px 0;
+  align-self: center;
+}
+
+.facts ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  counter-reset: myCounter;
+}
+
+.facts li {
+  margin-bottom: 93px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    counter-increment: myCounter;
+    content: "0"counter(myCounter);
+    top: -52px;
+    margin: 0 116px;
+    color: $turquoise;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -1.27px;
   }
+}
 
-  & ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    counter-reset: myCounter;
-  }
+.facts p {
+  margin: 0;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  max-width: 263px;
 
-  & li {
-    margin-bottom: 93px;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      counter-increment: myCounter;
-      content: "0"counter(myCounter);
-      top: -52px;
-      margin: 0 116px;
-      color: $turquoise;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 38px;
-      letter-spacing: -1.27px;
-    }
-  }
-
-  & p {
-    margin: 0;
-    font-size: 22px;
-    line-height: 34px;
-    letter-spacing: -0.5px;
-    text-align: center;
-    max-width: 263px;
-
-    @media (max-width: 1051px) {
-      max-width: 256px;
-    }
+  @media (max-width: 1051px) {
+    max-width: 256px;
   }
 }
 
@@ -64,28 +64,28 @@
 @media (max-width: $tablet-width) {
   .facts {
     margin-bottom: -23px;
+  }
 
-    & h2 {
-      font-size: 24px;
-      line-height: 41px;
-      margin-bottom: 86px;
+  .facts h2 {
+    font-size: 24px;
+    line-height: 41px;
+    margin-bottom: 86px;
+  }
+
+  .facts ol {
+    justify-content: space-between;
+    margin: 0 4px;
+  }
+
+  .facts li {
+    @media (min-width: 980px) {
+      margin-left: 6px;
+      margin-right: 6px;
     }
 
-    & ol {
-      justify-content: space-between;
-      margin: 0 4px;
-    }
-
-    & li {
-      @media (min-width: 980px) {
-        margin-left: 6px;
-        margin-right: 6px;
-      }
-
-      &::after {
-        top: -54px;
-        margin: 0 113px;
-      }
+    &::after {
+      top: -54px;
+      margin: 0 113px;
     }
   }
 
@@ -99,34 +99,34 @@
 @media (max-width: $mobile-width) {
   .facts {
     margin-bottom: -11px;
+  }
 
-    & ol {
-      flex-direction: column;
-      justify-content: start;
-      margin: 0;
+  .facts ol {
+    flex-direction: column;
+    justify-content: start;
+    margin: 0;
+  }
+
+  .facts li {
+    margin: 0 auto 92px auto;
+
+    &::after {
+      top: -46px;
+      margin: 0 116px;
     }
 
-    & li {
-      margin: 0 auto 92px auto;
+    &:first-child {
+      margin-bottom: 82px;
 
       &::after {
-        top: -46px;
-        margin: 0 116px;
-      }
-
-      &:first-child {
-        margin-bottom: 82px;
-
-        &::after {
-          top: -56px;
-        }
+        top: -56px;
       }
     }
+  }
 
-    & p {
-      font-size: 18px;
-      max-width: 263px;
-    }
+  .facts p {
+    font-size: 18px;
+    max-width: 263px;
   }
 
   .facts__wrapper {

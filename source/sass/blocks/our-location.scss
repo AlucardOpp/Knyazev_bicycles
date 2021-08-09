@@ -4,54 +4,54 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+}
 
-  & h2 {
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 30px;
-    letter-spacing: -0.005em;
-    color: $our-location-black;
-    margin: 0 0 29px 0;
-    text-align: center;
-  }
+.our-location h2 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $our-location-black;
+  margin: 0 0 29px 0;
+  text-align: center;
+}
 
-  & p {
-    margin: 0;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-    text-align: center;
-    color: $black-70;
-    max-width: 555px;
-  }
+.our-location p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 31px;
+  text-align: center;
+  color: $black-70;
+  max-width: 555px;
 }
 
 @media (max-width: $tablet-width) {
   .our-location {
     margin-bottom: 20px;
+  }
 
-    & h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
+  .our-location h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 
-    & p {
-      max-width: none;
-    }
+  .our-location p {
+    max-width: none;
   }
 }
 
 @media (max-width: $mobile-width) {
   .our-location {
     margin-bottom: 18px;
+  }
 
-    & h2 {
-      font-size: 18px;
-    }
+  .our-location h2 {
+    font-size: 18px;
+  }
 
-    & p {
-      margin: 0 25px;
-      text-align: center;
-    }
+  .our-location p {
+    margin: 0 25px;
+    text-align: center;
   }
 }

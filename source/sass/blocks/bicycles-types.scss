@@ -2,69 +2,69 @@
   background-color: $bicycles-types-background-grey;
   padding: 150px 0 149px 0;
   overflow: hidden;
+}
 
-  & h2 {
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 30px;
-    letter-spacing: -0.005em;
-    color: $our-location-black;
-    margin: 0 0 50px 0;
-    text-align: center;
+.bicycles-types h2 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $our-location-black;
+  margin: 0 0 50px 0;
+  text-align: center;
+}
+
+.bicycles-types h3 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+  color: $black;
+  text-align: center;
+  margin: 17px 0 0 0;
+}
+
+.bicycles-types ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: 1180px) {
+    justify-content: start;
   }
 
-  & h3 {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 34px;
-    letter-spacing: -0.5px;
-    color: $black;
-    text-align: center;
-    margin: 17px 0 0 0;
+  @media (max-width: 1179px) {
+    margin: 0 20px;
   }
+}
 
-  & ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.bicycles-types li {
+  position: relative;
+  z-index: 1;
 
-    @media (min-width: 1180px) {
-      justify-content: start;
-    }
+  @media (min-width: 1180px) {
+    margin-right: 50px;
 
-    @media (max-width: 1179px) {
-      margin: 0 20px;
-    }
-  }
-
-  & li {
-    position: relative;
-    z-index: 1;
-
-    @media (min-width: 1180px) {
-      margin-right: 50px;
-
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-    }
-  }
-
-  & img,
-  & picture {
-    border-radius: 10px;
-
-    @media (max-width: 1099px) {
-      width: 320px;
+    &:nth-child(3n) {
+      margin-right: 0;
     }
   }
+}
 
-  & img {
-    background-color: $bicycle-background-grey;
+.bicycles-types picture,
+.bicycles-types img {
+  border-radius: 10px;
+
+  @media (max-width: 1099px) {
+    width: 320px;
   }
+}
+
+.bicycles-types img {
+  background-color: $bicycle-background-grey;
 }
 
 .bicycles-types__wrapper {
@@ -128,32 +128,32 @@
 @media (max-width: $tablet-width) {
   .bicycles-types {
     padding: 50px 0 20px 0;
+  }
 
-    & h2 {
-      font-size: 24px;
-      line-height: 41px;
-      margin-bottom: 30px;
+  .bicycles-types h2 {
+    font-size: 24px;
+    line-height: 41px;
+    margin-bottom: 30px;
+  }
+
+  .bicycles-types ul {
+    margin: 0 -25px;
+    justify-content: space-around;
+
+    @media (min-width: 938px) {
+      margin: 0 18px;
     }
+  }
 
-    & ul {
-      margin: 0 -25px;
-      justify-content: space-around;
+  .bicycles-types li {
+    margin-bottom: 50px;
+  }
 
-      @media (min-width: 938px) {
-        margin: 0 18px;
-      }
-    }
-
-    & li {
-      margin-bottom: 50px;
-    }
-
-    & img,
-    & picture {
-      width: 270px;
-      height: 300px;
-      object-fit: cover;
-    }
+  .bicycles-types img,
+  .bicycles-types picture {
+    width: 270px;
+    height: 300px;
+    object-fit: cover;
   }
 
   .bicycles-types__wrapper {
@@ -204,17 +204,17 @@
 @media (max-width: $mobile-width) {
   .bicycles-types {
     padding-bottom: 12px;
+  }
 
-    & ul {
-      margin: 0;
-      justify-content: start;
-      align-items: center;
-      flex-direction: column;
-    }
+  .bicycles-types ul {
+    margin: 0;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    & li {
-      margin-bottom: 42px;
-    }
+  .bicycles-types li {
+    margin-bottom: 42px;
   }
 
   .bicycles-types__wrapper {

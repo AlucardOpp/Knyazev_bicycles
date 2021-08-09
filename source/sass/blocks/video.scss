@@ -2,32 +2,32 @@
   background-color: $videos-background-black;
   padding-top: 121px;
   margin-bottom: 248px;
+}
 
-  & h2 {
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 30px;
-    letter-spacing: -0.005em;
-    color: $white;
-    margin: 0 0 20px 0;
-  }
+.video h2 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $white;
+  margin: 0 0 20px 0;
+}
 
-  & p {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: -0.005em;
-    color: $white;
-    opacity: 0.7;
-    margin: 0 0 55px 0;
-    max-width: 340px;
-    text-align: center;
-  }
+.video p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  color: $white;
+  opacity: 0.7;
+  margin: 0 0 55px 0;
+  max-width: 340px;
+  text-align: center;
+}
 
-  & img {
-    margin-bottom: -101px;
-    background-color: $black;
-  }
+.video img {
+  margin-bottom: -101px;
+  background-color: $black;
 }
 
 .video__wrapper {
@@ -78,26 +78,26 @@
   .video {
     padding-top: 70px;
     margin-bottom: 155px;
+  }
 
-    & h2 {
-      font-size: 24px;
-    }
+  .video h2 {
+    font-size: 24px;
+  }
 
-    & p {
-      margin-bottom: 40px;
-      max-width: 429px;
-    }
+  .video p {
+    margin-bottom: 40px;
+    max-width: 429px;
+  }
 
-    & img,
-    & picture {
-      width: 503px;
-      height: 282px;
-      object-fit: cover;
-    }
+  .video img,
+  .video picture {
+    width: 503px;
+    height: 282px;
+    object-fit: cover;
+  }
 
-    & img {
-      margin-bottom: -88px;
-    }
+  .video img {
+    margin-bottom: -88px;
   }
 
   .video__wrapper {
@@ -124,21 +124,21 @@
   .video {
     padding-top: 84px;
     margin-bottom: 119px;
+  }
 
-    & p {
-      margin-bottom: 53px;
-      max-width: none;
-    }
+  .video p {
+    margin-bottom: 53px;
+    max-width: none;
+  }
 
-    & img,
-    & picture {
-      width: 288px;
-      height: 162px;
-    }
+  .video img,
+  .video picture {
+    width: 288px;
+    height: 162px;
+  }
 
-    & img {
-      margin-bottom: -52px;
-    }
+  .video img {
+    margin-bottom: -52px;
   }
 
   .video__wrapper {
