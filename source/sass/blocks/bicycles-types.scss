@@ -30,27 +30,40 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
-  @media (min-width: 1180px) {
-    justify-content: start;
-  }
-
-  @media (max-width: 1179px) {
-    margin: 0 20px;
+  @media (max-width: 1249px) {
+    margin: 0 36px 0 60px;
   }
 }
 
 .bicycles-types li {
   position: relative;
   z-index: 1;
+  max-width: 342px;
 
-  @media (min-width: 1180px) {
-    margin-right: 50px;
+  @media (max-width: 1249px) {
+    max-width: 300px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-right: 14px;
 
     &:nth-child(3n) {
       margin-right: 0;
     }
+  }
+
+  @media (min-width: 1053px) {
+    margin-right: 28px;
+  }
+
+  @media (min-width: 1081px) {
+    margin-right: 42px;
+  }
+
+  @media (min-width: 1104px) {
+    margin-right: 50px;
   }
 }
 
@@ -58,8 +71,9 @@
 .bicycles-types img {
   border-radius: 10px;
 
-  @media (max-width: 1099px) {
-    width: 320px;
+  @media (max-width: 1249px) {
+    width: 300px;
+    height: 480px;
   }
 }
 
@@ -147,6 +161,7 @@
 
   .bicycles-types li {
     margin-bottom: 50px;
+    margin-left: 0;
   }
 
   .bicycles-types img,

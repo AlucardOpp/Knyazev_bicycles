@@ -14,12 +14,15 @@
 
 .facts ol {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
   counter-reset: myCounter;
+
+  @media (min-width: 1190px) {
+    column-gap: 38px;
+  }
 }
 
 .facts li {
@@ -49,7 +52,7 @@
   max-width: 263px;
 
   @media (max-width: 1051px) {
-    max-width: 256px;
+    max-width: 245px;
   }
 }
 
@@ -73,8 +76,10 @@
   }
 
   .facts ol {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 4px;
+    margin: 0;
   }
 
   .facts li {
@@ -87,6 +92,10 @@
       top: -54px;
       margin: 0 113px;
     }
+  }
+
+  .facts p {
+    max-width: 263px;
   }
 
   .facts__wrapper {

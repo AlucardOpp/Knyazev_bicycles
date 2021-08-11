@@ -35,6 +35,16 @@
     }
   }
 
+  &:focus {
+    outline: $black solid 2px;
+    outline-offset: 2px;
+
+    &::before {
+      outline: $black solid 2px;
+      outline-offset: 2px;
+    }
+  }
+
   &--mail {
     &::before {
       content: "";

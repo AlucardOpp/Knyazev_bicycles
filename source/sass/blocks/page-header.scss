@@ -10,6 +10,7 @@
 
 .page-header__link {
   display: none;
+  cursor: default;
 }
 
 @media (max-width: $tablet-width) {

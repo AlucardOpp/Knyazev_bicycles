@@ -8,6 +8,8 @@ const mainNavToggle = document.querySelector('.main-nav__toggle');
 const inputName = document.querySelector("#name");
 const inputTel = document.querySelector('#tel');
 const form = document.querySelector(".form");
+const body = document.querySelector(".body");
+const links = mainNav.querySelectorAll("a");
 
 const isStorageSupport = true;
 let storageName = '';
@@ -31,6 +33,7 @@ if (pageHeaderWrapper) {
   pageHeaderWrapper.classList.remove('page-header__wrapper--nojs');
 }
 
+
 if (mainNav && mainNavToggle) {
   mainNav.classList.remove('main-nav--nojs');
   mainNavToggle.classList.remove('main-nav__toggle--nojs');
@@ -38,6 +41,14 @@ if (mainNav && mainNavToggle) {
   mainNavToggle.addEventListener('click', () => {
     mainNavToggle.classList.toggle('main-nav__toggle--opened');
     mainNav.classList.toggle('main-nav--opened');
+    body.classList.toggle('body--overflow-hidden');
+  });
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      mainNavToggle.classList.toggle('main-nav__toggle--opened');
+      mainNav.classList.toggle('main-nav--opened');
+      body.classList.toggle('body--overflow-hidden');
+    });
   });
 }
 

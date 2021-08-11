@@ -133,8 +133,10 @@
 
   .video img,
   .video picture {
-    width: 288px;
-    height: 162px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   .video img {
@@ -150,7 +152,10 @@
     width: 65px;
     height: 65px;
     top: 48px;
-    left: 112px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
 
     &::before {
       width: 65px;
