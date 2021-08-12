@@ -1,6 +1,6 @@
 .contacts ul {
   list-style: none;
-  margin: 0 214px 0 237px;
+  margin: 0 213px 0 196px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -36,34 +36,32 @@
   }
 
   &:focus {
-    outline: $black solid 2px;
-    outline-offset: 2px;
-
-    &::before {
-      outline: $black solid 2px;
-      outline-offset: 2px;
-    }
+    outline-offset: 5px;
   }
 
   &--mail {
+    padding-left: 41px;
+
     &::before {
       content: "";
       position: absolute;
       width: 26px;
       height: 20px;
       background-image: url("../img/email.svg");
-      left: -40px;
+      left: 0;
     }
   }
 
   &--phone {
+    padding-left: 37px;
+
     &::before {
       content: "";
       position: absolute;
       width: 21.5px;
       height: 24px;
       background-image: url("../img/phone.svg");
-      left: -37px;
+      left: 0;
       top: -4px;
     }
   }
@@ -71,7 +69,7 @@
 
 @media (max-width: $tablet-width) {
   .contacts ul {
-    margin: 0 81px 0 111px;
+    margin: 0 81px 0 70px;
 
     @media (min-width: 850px) {
       justify-content: space-around;
@@ -96,7 +94,7 @@
 @media (max-width: $mobile-width) {
   .contacts ul {
     flex-direction: column;
-    margin: 0 22px 0 71px;
+    margin: 0 22px 0 30px;
     align-items: center;
   }
 
@@ -109,14 +107,8 @@
   }
 
   .contacts__link {
-    &--mail {
-      &::before {
-        left: -41px;
-      }
-    }
-
     &--phone {
-      margin-left: -24px;
+      margin-left: -21px;
     }
   }
 }

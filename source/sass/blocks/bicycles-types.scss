@@ -122,7 +122,11 @@
       height: 47px;
       background-image: url("../img/mountain-bike-square.svg");
       right: -23px;
-      bottom: 31px;
+      top: 542px;
+
+      @media (max-width: 1249px) {
+        top: 455px;
+      }
     }
   }
 
@@ -162,6 +166,7 @@
   .bicycles-types li {
     margin-bottom: 50px;
     margin-left: 0;
+    max-width: 270px;
   }
 
   .bicycles-types img,
@@ -184,8 +189,7 @@
         height: 127px;
         background-size: cover;
         left: -37px;
-        top: auto;
-        bottom: 26px;
+        top: 201px;
       }
     }
 
